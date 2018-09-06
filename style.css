@@ -1,34 +1,95 @@
-/* Color Scheme Red: #d41a1a Ebony Clay (Dark Blue): #22313f Lynch (Lighter Blue): #6c7a89 Porceline (Lightest Blue) #ecf0f1 Font: Gloria Hallelujah;
- */
- body {
-     font-family: 'Roboto Mono', monospace;
-     width: 100%;
-}
- .container {
-     text-align: justify;
-     width: 80%;
-}
- .col-3 {
-     text-align: left;
-     background-color: #22313f;
-     color: white;
-     padding: 60px 20px 20px 20px;
-     margin-right: 50px;
-}
- p {
-     font-size: 14px;
+body {
+  font-family: 'Roboto Mono', monospace;
+  width: 100%;
+  margin: 30px;
 }
 
- .btn-dark {
-     font-size: 14px;
-     padding:5px 20px 5px 20px;
-     margin-top: 30px;
+p {
+  font-size: 14px;
+  color: #d71b1b;
 }
 
-.col-sm {
-  padding: 100px 10px 50px 10px;
+#logo-container {
+width: 100%;
+margin-left: 60%;
 }
 
-.col-sm #hidden-dice {
-  display: none;
-  }
+#main-container {
+  width: 100%;
+}
+
+
+/*Score Card */
+.col-3 {
+  background-color: #22313f;
+  color: white;
+  padding: 20px 30px 20px 20px;
+  border: 1px solid #d71b1b;
+  margin-top: -120px;
+}
+
+
+/* Hold Button */
+.btn-dark {
+  background-color: #bdc3c7;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  color: #22313f;
+}
+
+
+/*Points Calculator */
+#points-btn {
+  background-color: #22313f;
+  margin: 25px 20px 30px 20px;
+  border: 3px solid #d71b1b;
+}
+
+
+/* Main Dice Section */
+.col-sm
+#points-btn,
+#first-die-slot,
+#second-die-slot,
+#third-die-slot,
+#fourth-die-slot,
+#fifth-die-slot {
+  padding: 20px 0px 30px 0px;
+  display: inline-block;
+}
+
+
+/* Roll Dice Button */
+#roll-dice-btn {
+  margin-top: -250px;
+  margin-right: 100px;
+  padding: 15px;
+}
+
+
+/* Replay Game Button */
+#replay-game-btn {
+  margin-left: 350px;
+  margin-top: -475px;
+  padding: 15px;
+}
+
+
+/* Disabled Form Box */
+.form-control {
+  float: right;
+  text-align: center;
+  width: 30%;
+  height: 16px;
+  display: block;
+  margin-top: -5px;
+  padding: 5px;
+}
+
+
+/* Sidebar Category Text */
+.form-group {
+  font-size: 14px;
+  line-height: 0.25;
+  padding: 0px;
+}

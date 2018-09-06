@@ -1,74 +1,138 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-      <link rel="stylesheet" href="style.css">
-      <script src="main.js"></script>
-      <title>Yahtzee</title>
-   </head>
-   <body>
-      <header>
-      </header>
-      <main>
-         <div class="container">
-            <div class="row">
-               <div class="col-3">
-                  <h5> Score Card </h5>
-                  <p> Ones <br>
-                     Twos  <br>
-                     Threes <br>
-                     Fours <br>
-                     Fives <br>
-                     Sixes <br>
-                     Bonus <br>
-                     Three-of-a Kind <br>
-                     Four-of-a-Kind <br>
-                     Full House <br>
-                     Small Straight <br>
-                  </p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>Yahtzee</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header" id = "logo-container">
+      <a class="navbar-brand" href="images/YahtzeeLogo.png">
+        <img alt="Brand" src="images/YahtzeeLogo.png">
+      </a>
+    </div>
+  </div>
+</nav>
+  </header>
+  <main>
+      <!-- Main container starts here-->
+    <div class="container" id = "main-container">
+      <div class="row">
+        <div class="col-3">
+          <!-- Score Card starts here-->
+          <form>
+            <fieldset disabled>
+              <h6> Score Card </h6>
+              <hr>
+               <p> Lower Section  - - </p>
+              <div class="form-group">
+                <label for="disabledTextInput">One's</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Two's</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Three's</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Four's</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Five's</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Six's</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+               <hr>
+                <p> Upper Section - -  </p>
+              <div class="form-group">
+                <label for="disabledTextInput">3 of a Kind</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">4 of a Kind</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Straight</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Full House</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Yahtzee</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="disabledTextInput">Chance</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <!-- Main Section with 5 die images. 5 columns equal columns. Images are 75x74.-->
+        <div class="col-sm">
+                  <button type="button" class="btn btn-primary" id ="points-btn">  <!-- Point Calculator-->
+                   <br>&nbsp Points <br> <span class="badge badge-light">0</span>
+                  </button>
                </div>
-               <div class="col-sm">
-                  <img src="images/dice1.png" class="rounded float-left" alt=""><span>
-                  <button type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <div class="col-sm ">
+                  <img src="images/dice1.png " class="rounded " id = "first-die-slot" " alt=""><span>
+                  <button type="button" class="btn btn-dark" id = "first-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
-               </div>
-               <div class="col-sm">
-                  <img src="images/dice2.png" class="rounded float-left" alt=""><span>
-                  <button type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false" autocomplete="off">
+        </div>
+        <div class="col-sm">
+          <img src="images/dice2.png" class="rounded" id="second-die-slot" alt=""><span>
+                  <button type="button" class="btn btn-dark" id = "second-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
-               </div>
-               <div class="col-sm">
-                  <img src="images/dice3.png" class="rounded float-left" alt=""><span>
-                  <button type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false" autocomplete="off">
+        </div>
+        <div class="col-sm">
+          <img src="images/dice3.png" class="rounded" id="third-die-slot" alt=""><span>
+                  <button type="button" class="btn btn-dark" id = "third-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
-               </div>
-               <div class="col-sm">
-                  <img src="images/dice4.png" class="rounded float-left" alt=""><span>
-                  <button type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false" autocomplete="off">
+        </div>
+        <div class="col-sm">
+          <img src="images/dice4.png" class="rounded" id="fourth-die-slot" alt=""><span>
+                  <button type="button" class="btn btn-dark" id = "fourth-die-hold-button"  data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
-               </div>
-               <div class="col-sm">
-                  <img src="images/dice5.png" class="rounded float-left" alt=""><span>
-                  <button type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false" autocomplete="off">
+        </div>
+        <div class="col-sm">
+          <img src="images/dice5.png" class="rounded" id="fifth-die-slot" alt=""><span>
+                  <button type="button" class="btn btn-dark" id = "fifth-die-hold-button"  data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
-              <div class="col-sm .d-none" id = "hidden-dice">
-                  <img src="images/dice5.png" class="rounded float-left" alt=""><span>
-                  <button type="button" class="btn btn-dark" data-toggle="button" aria-pressed="false" autocomplete="off">
-                  Hold
-                  </button></span>
-               </div>
-            </div>
-         </div>
-      </main>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-   </body>
+        </div>
+       <!-- The 6th die is hidden here -->
+        <div class="invisible" id="sixth-die-slot">
+          <img src="images/dice6.png" class="rounded" alt="">
+        </div>
+          <!-- Roll Dice and Start New Game Buttons -->
+        <div class="col-sm">
+          <button type="button" class="btn btn-danger float-right" id="roll-dice-btn">Start New Gamee</button>
+        </div>
+      </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
 </html>
