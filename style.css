@@ -1,9 +1,30 @@
-/*
-Color Scheme
-Red: #d41a1a
-Ebony Clay (Dark Blue): #22313f
-Lynch (Lighter Blue): #6c7a89
-Pumice (Gray): ;
+/* Color Scheme Red: #d41a1a Ebony Clay (Dark Blue): #22313f Lynch (Lighter Blue): #6c7a89 Porceline (Lightest Blue) #ecf0f1 Font: Gloria Hallelujah;
+ */
+ body {
+     font-family: 'Roboto Mono', monospace;
+     width: 100%;
+}
+ .container {
+     text-align: justify;
+     width: 80%;
+}
+ .col-3 {
+     text-align: left;
+     background-color: #22313f;
+     color: white;
+     padding: 60px 20px 20px 20px;
+     margin-right: 50px;
+}
+ p {
+     font-size: 14px;
+}
 
+ .btn-dark {
+     font-size: 14px;
+     padding:5px 20px 5px 20px;
+     margin-top: 30px;
+}
 
-Font: Gloria Hallelujah;
+.col-sm {
+  padding: 100px 10px 50px 10px;
+}
