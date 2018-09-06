@@ -28,3 +28,7 @@
 .col-sm {
   padding: 100px 10px 50px 10px;
 }
+
+.col-sm #hidden-dice {
+  display: none;
+  }
