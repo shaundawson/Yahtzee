@@ -87,7 +87,7 @@
         <!-- Main Section with 5 die images. 5 columns equal columns. Images are 75x74.-->
         <div class="col-sm">
                   <button type="button" class="btn btn-primary" id ="points-btn">  <!-- Point Calculator-->
-                   <br>&nbsp Points <br> <span class="badge badge-light">0</span>
+                   Score <span class="badge badge-light">0</span>
                   </button>
                </div>
                   <div class="col-sm ">
@@ -125,10 +125,15 @@
           <img src="images/dice6.png" class="rounded" alt="">
         </div>
           <!-- Roll Dice and Start New Game Buttons -->
-        <div class="col-sm">
-          <button type="button" class="btn btn-danger float-right" id="roll-dice-btn">Start New Gamee</button>
+
+                    <div class="col-sm-6">
+   <button type="button" class="btn btn-danger" id ="roll-dice-btn">Roll Dice</button> <!--Start Game Button with negative top margin. Should you use Z-index?-->
         </div>
-      </div>
+        <div class="col-sm-6">
+          <button type="button" class="btn btn-danger" id ="mark-scoreboard-btn"> Mark Scoreboard</button> <!--Roll dice button-->
+        </div>
+
+    </div>
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

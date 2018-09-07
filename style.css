@@ -2,6 +2,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   width: 100%;
   margin: 30px;
+  background-color: #ececec;
 }
 
 p {
@@ -18,61 +19,73 @@ margin-left: 60%;
   width: 100%;
 }
 
+/* Alert Container */
+#alert-container {
+position: relative;
+text-align: center;
+width: 400px;
+margin-right: -800px;
+padding: 40px;
+
+}
+
 
 /*Score Card */
 .col-3 {
   background-color: #22313f;
   color: white;
   padding: 20px 30px 20px 20px;
-  border: 1px solid #d71b1b;
-  margin-top: -120px;
+ border: 3px solid #d71b1b;
+  margin-top: -100px;
 }
 
 
 /* Hold Button */
 .btn-dark {
-  background-color: #bdc3c7;
+  background-color: #22313f;
   font-size: 14px;
   padding: 5px 10px 5px 10px;
-  color: #22313f;
+  color: white;
 }
 
 
 /*Points Calculator */
 #points-btn {
   background-color: #22313f;
-  margin: 25px 20px 30px 20px;
+  margin: -150px 20px 30px 20px;
   border: 3px solid #d71b1b;
 }
 
 
 /* Main Dice Section */
 .col-sm
-#points-btn,
 #first-die-slot,
 #second-die-slot,
 #third-die-slot,
 #fourth-die-slot,
 #fifth-die-slot {
-  padding: 20px 0px 30px 0px;
+  padding: 125px 20px 30px 0px;
   display: inline-block;
 }
 
+/* Mark Scoreboard */
+#mark-scoreboard-btn{
+  background-color: #6c7a89;
+  font-size: 18px;
+  margin-top: -200px;
+  margin-right: 80px;
+  float: right;
+ border: 3px solid #22313f;;
+}
 
-/* Roll Dice Button */
 #roll-dice-btn {
-  margin-top: -250px;
-  margin-right: 100px;
-  padding: 15px;
+padding: 25px 25px 25px 25px;
+margin-top: -680px;
+margin-left: 300px;
+float: none;
+border: 3px solid #22313f;
 }
 
-
-/* Replay Game Button */
-#replay-game-btn {
-  margin-left: 350px;
-  margin-top: -475px;
-  padding: 15px;
-}
 
 
 /* Disabled Form Box */
