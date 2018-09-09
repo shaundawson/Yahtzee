@@ -1,5 +1,6 @@
-ABOUT YAHTZEE
+Single-user version of "Yahtzee" created with Javascript and Bootstrap.
 
+ABOUT YAHTZEE
 Yahtzee is a dice based game with a poker twist. The objective of the game is to
 roll dice to ge the highest scoring combinatrion for 13 winning combinations.
 Each combination can only be used once. The game ends when the Player has had an
