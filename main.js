@@ -1,13 +1,11 @@
-
 //Array of random die images 1-6
 const randomImages= new Array ('images/dice/1.png', 'images/dice/2.png','images/dice/3.png','images/dice/4.png', 'images/dice/5.png','images/dice/6.png');
 const roundCounter = 0 //counter for rounds
 
-const roll1Array = []; // creates array for die in first roll
-const roll2Array = []; // creates array for die in second roll
-const roll3Array = []; // creates array for die in third roll
-
-
+//Arays with die values for roll1 roll2, roll3
+const roll1Array = [];
+const roll2Array = [];
+const roll3Array = [];
 
 //Add Event listners to Roll Dice Button to randomize images
 const rollDiceClick = document.getElementById("#roll-dice-btn");
@@ -16,7 +14,6 @@ rollDiceClick.addEventListener("click", changeSourceD2);
 rollDiceClick.addEventListener("click", changeSourceD3);
 rollDiceClick.addEventListener("click", changeSourceD4);
 rollDiceClick.addEventListener("click", changeSourceD5);
-
 
 
 //Randomize die image and returns value of card in first-die-slot column
@@ -28,7 +25,6 @@ function changeSourceD1() {
     roll1Array.push(randomDieValue1 +1)[0];
     return randomDieValue1 +1;
 }
-
 
 //Randomize die image and returns value of card in second-die-slot column
 function changeSourceD2() {
@@ -46,8 +42,8 @@ function changeSourceD3() {
     const d3 = document.querySelector('#third-die-slot');
     const randomDieValue3 = Math.floor((randomImages.length-1)*Math.random());
     const source3 = document.querySelector('#third-die-slot').setAttribute('src',randomImages[randomDieValue3])
-    roll1Array.push(randomDieValue3 +1)[2];
     console.log(randomDieValue3 +1);
+    roll1Array.push(randomDieValue3 +1)[2];
     return randomDieValue3 +1;
 }
 
@@ -57,8 +53,8 @@ function changeSourceD4() {
     const d4 = document.querySelector('#fourth-die-slot');
     const randomDieValue4 = Math.floor((randomImages.length-1)*Math.random());
     const source4 = document.querySelector('#fourth-die-slot').setAttribute('src',randomImages[randomDieValue4])
-    roll1Array.push(randomDieValue4 +1)[3];
     console.log(randomDieValue4 +1);
+    roll1Array.push(randomDieValue4 +1)[3];
     return randomDieValue4 +1;
 }
 
@@ -73,7 +69,12 @@ function changeSourceD5() {
     return randomDieValue5 +1;
 }
 
-
-
-
+function toggleButton() {
+  // Check to see if the button is pressed
+  const toggleOn = document.querySelector('#first-die-hold-button', '#second-die-hold-slot', '#third-die-hold-slot', '#fourth-die-hold-slot', '#fifth-die-hold-slot');
+  const pressed = (toggleOn.getAttribute("aria-pressed") === "true");
+  // Change aria-pressed to the opposite state
+  toggleOn.setAttribute("aria-pressed", !pressed);
+  console.log("Keep Last element")
+}
 
