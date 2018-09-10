@@ -3,15 +3,25 @@ const randomImages= new Array ('images/dice/1.png', 'images/dice/2.png','images/
 
 //Arays with die values for roll1 roll2, roll3
 const roll1Array = new Array();
-const holdArray = [1,2,3,4,5];
+let counter = 0
 
-//Add Event listners to Roll Dice Button to randomize images
+// Roll Checker
+function checkCounter (){
+if (counter >= 3){
+ counter = 0;
+}}
+
+// Add Event listners to Roll Dice Button to randomize images.
+function rollDice() {
 const rollDiceClick = document.getElementById("#roll-dice-btn");
 rollDiceClick.addEventListener("click", changeSourceD1);
 rollDiceClick.addEventListener("click", changeSourceD2);
 rollDiceClick.addEventListener("click", changeSourceD3);
 rollDiceClick.addEventListener("click", changeSourceD4);
 rollDiceClick.addEventListener("click", changeSourceD5);
+}
+
+
 
 //Randomize die image and returns value of die in first-die-slot column
 function changeSourceD1() {
@@ -20,6 +30,9 @@ function changeSourceD1() {
     const source1 = document.querySelector('#first-die-slot').setAttribute('src',randomImages[randomDieValue1])
     console.log(`The first die is a ${randomDieValue1 +1}`);
     roll1Array[0] = randomDieValue1 +1;
+    counter++
+    alert(`Roll ${counter} of 3`);
+    checkCounter();
     return randomDieValue1 +1;
 }
 
@@ -69,7 +82,9 @@ function toggleButtonOne() {
   const pressed1 = (toggleOn1.getAttribute("aria-pressed") === "false");
   // Change aria-pressed to the opposite state
   toggleOn1.setAttribute("aria-pressed", !pressed1);
+  indexToInsertNewElementAt = roll1Array[0],
   elementToInsert = roll1Array[0];
+  console.log(pressed1);
   alert(`You held a ${elementToInsert}`);
 }
 
@@ -79,8 +94,9 @@ function toggleButtonTwo() {
   const pressed2 = (toggleOn2.getAttribute("aria-pressed") === "false");
   // Change aria-pressed to the opposite state
   toggleOn2.setAttribute("aria-pressed", !pressed2);
-  indexToInsertNewElementAt = roll1Array[2],
+  indexToInsertNewElementAt = roll1Array[1],
   elementToInsert = roll1Array[1];
+  console.log(pressed2);
   alert(`You held a ${elementToInsert}`);
 
 }
@@ -91,32 +107,36 @@ function toggleButtonThree() {
   const pressed3 = (toggleOn3.getAttribute("aria-pressed") === "false");
   // Change aria-pressed to the opposite state
   toggleOn3.setAttribute("aria-pressed", !pressed3);
-  indexToInsertNewElementAt = holdArray[2],
-  elementToInsert = roll1Array[2];
+  indexToInsertNewElementAt = roll1Array[2],
+  elementToInsert = roll1Array[2],
+  console.log(pressed3);
   alert(`You held a ${elementToInsert}`);
 }
-
 
 // Check to see if the hold button is pressed in fourth-die-slot column
 function toggleButtonFour() {
   const toggleOn4 = document.querySelector('#fourth-die-hold-button');
-  const pressed4 = (toggleOn4.getAttribute("aria-pressed") === "true");
+  const pressed4 = (toggleOn4.getAttribute("aria-pressed") === "false");
   // Change aria-pressed to the opposite state
   toggleOn4.setAttribute("aria-pressed", !pressed4);
-  indexToInsertNewElementAt = holdArray[3],
+  indexToInsertNewElementAt = roll1Array[3],
   elementToInsert = roll1Array[3];
- alert(`You held a ${elementToInsert}`);
+  console.log(pressed4);
+  alert(`You held a ${elementToInsert}`);
 }
-
 
 // Check to see if the hold button is pressed in fifth-die-slot column
 function toggleButtonFive() {
   const toggleOn5 = document.querySelector('#fifth-die-hold-button');
-  const pressed5 = (toggleOn5.getAttribute("aria-pressed") === "true");
+  const pressed5 = (toggleOn5.getAttribute("aria-pressed") === "false");
   // Change aria-pressed to the opposite state
   toggleOn5.setAttribute("aria-pressed", !pressed5);
-  indexToInsertNewElementAt = holdArray[4],
+  indexToInsertNewElementAt = roll1Array[4],
   elementToInsert = roll1Array[4];
+  console.log(pressed5);
   alert(`You held a ${elementToInsert}`);
 }
+
+
+
 
