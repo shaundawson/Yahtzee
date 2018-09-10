@@ -6,7 +6,7 @@ body {
 }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
   color: #d71b1b;
 }
 
@@ -91,6 +91,7 @@ border: 3px solid #22313f;
 /* Disabled Form Box */
 .form-control {
   float: right;
+  font-size: 12px;
   text-align: center;
   width: 30%;
   height: 16px;

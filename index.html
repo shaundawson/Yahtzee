@@ -13,7 +13,7 @@
     <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header" id = "logo-container">
-      <a class="navbar-brand" href="images/YahtzeeLogo.png">
+      <a class="navbar-brand" href="">
         <img alt="Brand" src="images/YahtzeeLogo.png">
       </a>
     </div>
@@ -59,7 +59,7 @@
                 <p> Upper Section - -  </p>
               <div class="form-group">
                 <label for="disabledTextInput">3 of a Kind</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="">
               </div>
               <div class="form-group">
                 <label for="disabledTextInput">4 of a Kind</label>
@@ -67,15 +67,15 @@
               </div>
               <div class="form-group">
                 <label for="disabledTextInput">Straight</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="30pts">
               </div>
               <div class="form-group">
                 <label for="disabledTextInput">Full House</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="25pts">
               </div>
               <div class="form-group">
                 <label for="disabledTextInput">Yahtzee</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="50pts">
               </div>
               <div class="form-group">
                 <label for="disabledTextInput">Chance</label>
@@ -86,14 +86,14 @@
         </div>
         <!-- Main Section with 5 die images. 5 columns equal columns. Images are 75x74.-->
         <div class="col-sm">
-                  <button type="button" class="btn btn-primary" id ="points-btn">  <!-- Point Calculator-->
-                   Score <span class="badge badge-light">0</span>
+                  <button type="button"class="btn btn-primary" id ="points-btn">  <!-- Point Calculator-->
+                   Rolls <span class="badge badge-light">0</span>
                   </button>
                </div>
         <div class="col-sm ">
           <img src="images/dice/1.png" class="rounded " id="first-die-slot" " alt="" />
                   <span>
-                  <button type="button" onclick= "toggleButton()" class="btn btn-dark active" id="first-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <button type="button" onclick= "toggleButtonOne()" class="btn btn-dark active" id="first-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button>
                   </span>
@@ -101,28 +101,28 @@
         <div class="col-sm">
           <img src="images/dice/2.png" class="rounded" id="second-die-slot" alt="" />
           <span>
-                  <button type="button" onclick="toggleButton()" class="btn btn-dark active" id="second-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <button type="button" onclick="toggleButtonTwo()" class="btn btn-dark active" id="second-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
         </div>
         <div class="col-sm">
           <img src="images/dice/3.png" class="rounded" id="third-die-slot" alt="" />
           <span>
-                  <button type="button" onclick="toggleButton()" class="btn btn-dark active" id="third-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <button type="button" onclick="toggleButtonThree()" class="btn btn-dark active" id="third-die-hold-button" data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
         </div>
         <div class="col-sm">
           <img src="images/dice/4.png" class="rounded" id="fourth-die-slot" alt="" />
           <span>
-                  <button type="button" onclick="toggleButton()" class="btn btn-dark active" id = "fourth-die-hold-button"  data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <button type="button" onclick="toggleButtonFour()" class="btn btn-dark active" id = "fourth-die-hold-button"  data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
         </div>
         <div class="col-sm">
           <img src="images/dice/5.png" class="rounded" id="fifth-die-slot" alt="" />
            <span>
-                  <button type="button" onclick="toggleButton()" class="btn btn-dark active" id = "fifth-die-hold-button"  data-toggle="button" aria-pressed="false" autocomplete="off">
+                  <button type="button" onclick="toggleButtonFive()" class="btn btn-dark active" id = "fifth-die-hold-button"  data-toggle="button" aria-pressed="false" autocomplete="off">
                   Hold
                   </button></span>
         </div>
@@ -133,10 +133,10 @@
           <!-- Roll Dice and Start New Game Buttons -->
 
                     <div class="col-sm-6">
-   <button type="button" onclick= "changeSourceD1(),changeSourceD2(),changeSourceD3(),changeSourceD4(),changeSourceD5()" class="btn btn-danger" id ="roll-dice-btn">Roll Dice </button>
+   <button type="button" onclick="changeSourceD1(),changeSourceD2(),changeSourceD3(),changeSourceD4(),changeSourceD5()" class="btn btn-danger" id ="roll-dice-btn">Roll Dice </button>
         </div>
         <div class="col-sm-6">
-          <button type="button" class="btn btn-danger" id ="mark-scoreboard-btn"> Mark Scoreboard </button>
+          <button type="button" onclick = "" class="btn btn-danger" id ="mark-scoreboard-btn"> Mark Scoreboard </button>
         </div>
 
     </div>
