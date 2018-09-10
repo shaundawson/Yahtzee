@@ -1,5 +1,5 @@
 
-![alt tag](http://shaundawson.github.io/mockup/BoostrapLayout.png "Yahtzee Bootstrap Mockup")
+![Alt text](mockup/bootstraplayout.png?raw=true "Optional Title")
 
 Game consist of 13 rounds. In each round, player rolls 5 dice and then scores the roll in one of 13 categories. You can only score once in each category. The score is determined by a different rule for each category. 
 
