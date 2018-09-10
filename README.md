@@ -1,5 +1,4 @@
-
-![Alt text](mockup/bootstraplayout.png?raw=true "Optional Title")
+![image](https://user-images.githubusercontent.com/23201454/45319648-61378c00-b50e-11e8-8209-7870076e8e42.png)
 
 Game consist of 13 rounds. In each round, player rolls 5 dice and then scores the roll in one of 13 categories. You can only score once in each category. The score is determined by a different rule for each category. 
 
