@@ -2,15 +2,14 @@
 const randomImages= new Array ('images/dice/1.png', 'images/dice/2.png','images/dice/3.png','images/dice/4.png', 'images/dice/5.png','images/dice/6.png');
 let counter = 0
 
-//Array with held and current values
+//Array with held and current die values
 const roll1Array = new Array();
 
 //Returns final array
 function holdArray(){
   if (counter >= 3) {
     console.log(roll1Array);
-  }
-}
+  }}
 
 // Round Checker
 function checkCounter (){
@@ -36,7 +35,6 @@ function changeSourceD1() {
     let pressed1 = (toggleOn1.getAttribute("aria-pressed") === "false");
     if (toggleOn1.getAttribute("aria-pressed") === "true") {
       return roll1Array[0];
-      console.log(roll1Array)
     }
     const randomDieValue1 = Math.floor((randomImages.length-1)*Math.random());
     const source1 = document.querySelector('#first-die-slot').setAttribute('src',randomImages[randomDieValue1])
@@ -45,7 +43,6 @@ function changeSourceD1() {
     console.log(`Roll ${counter} of 3`);
     counter++;
     checkCounter();
-    holdArray();
     return randomDieValue1 +1;
 }
 
@@ -57,54 +54,77 @@ function changeSourceD2() {
     if (toggleOn2.getAttribute("aria-pressed") === "true") {
       return roll1Array[1];
     }
-
     const randomDieValue2 = Math.floor((randomImages.length-1)*Math.random());
     const source2 = document.querySelector('#second-die-slot').setAttribute('src',randomImages[randomDieValue2])
     console.log(`The second die is a ${randomDieValue2 +1}`);
     roll1Array[1] = randomDieValue2 +1;
     console.log(`Roll ${counter} of 3`);
+    counter++;
+    checkCounter();
     return randomDieValue2 +1;
-    // If Button toggle is on don't change me
-      // get dom refrence for button with number that corresponds to this die
-      // query that dom refrence and do the thing
+
 }
 
 //Randomize die image and returns value of die in third-die-slot column
 function changeSourceD3() {
     const d3 = document.querySelector('#third-die-slot');
+    const toggleOn3 = document.querySelector('#third-die-hold-button');
+    let pressed3 = (toggleOn3.getAttribute("aria-pressed") === "false");
+    if (toggleOn3.getAttribute("aria-pressed") === "true") {
+    return roll1Array[2];
+    }
     const randomDieValue3 = Math.floor((randomImages.length-1)*Math.random());
     const source3 = document.querySelector('#third-die-slot').setAttribute('src',randomImages[randomDieValue3])
     console.log(`The third die is a ${randomDieValue3 +1}`);
     roll1Array[2] = randomDieValue3 +1;
+    console.log(`Roll ${counter} of 3`);
+    counter++;
+    checkCounter();
     return randomDieValue3 +1;
 }
 
 //Randomize die image and returns value of die in fourth-die-slot column
 function changeSourceD4() {
     const d4 = document.querySelector('#fourth-die-slot');
+    const toggleOn4 = document.querySelector('#fourth-die-hold-button');
+    let pressed4 = (toggleOn4.getAttribute("aria-pressed") === "false");
+    if (toggleOn4.getAttribute("aria-pressed") === "true") {
+    return roll1Array[3];
+    }
     const randomDieValue4 = Math.floor((randomImages.length-1)*Math.random());
     const source4 = document.querySelector('#fourth-die-slot').setAttribute('src',randomImages[randomDieValue4])
     console.log(`The fourth die is a ${randomDieValue4 +1}`);
     roll1Array[3] = randomDieValue4 +1;
+    console.log(`Roll ${counter} of 3`);
+    counter++;
+    checkCounter();
     return randomDieValue4 +1;
 }
 
 //Randomize die image and returns value of die in fifth-die-slot column
 function changeSourceD5() {
     const d5 = document.querySelector('#fifth-die-slot');
+    const toggleOn5 = document.querySelector('#fifth-die-hold-button');
+    let pressed5 = (toggleOn5.getAttribute("aria-pressed") === "false");
+    if (toggleOn5.getAttribute("aria-pressed") === "true") {
+    return roll1Array[4];
+    }
     const randomDieValue5 = Math.floor((randomImages.length-1)*Math.random());
     const source5 = document.querySelector('#fifth-die-slot').setAttribute('src',randomImages[randomDieValue5])
     console.log(`The fifth die is a ${randomDieValue5 +1}`);
     roll1Array[4] = randomDieValue5 +1;
-     return randomDieValue5 +1;
+    console.log(`Roll ${counter} of 3`);
+    counter++;
+    checkCounter();
+    return randomDieValue5 +1;
 }
 
 // Check to see if the hold button is pressed in first-die-slot column
 function toggleButtonOne() {
   const toggleOn1 = document.querySelector('#first-die-hold-button');
-  let pressed1 = (toggleOn1.getAttribute("aria-pressed") === "true");
+  let pressed1 = (toggleOn1.getAttribute("aria-pressed") === "false");
   if (toggleOn1.getAttribute("aria-pressed") === "true") {
-      return;}
+      return roll1Array[0];}
   // Change aria-pressed to the opposite state
   toggleOn1.setAttribute("aria-pressed", !pressed1);
   indexToInsertNewElementAt = roll1Array[0],
