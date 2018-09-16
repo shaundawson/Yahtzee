@@ -33,7 +33,7 @@
                <p> Lower Section  - - </p>
               <div class="form-group">
                 <label for="disabledTextInput">One's</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="0">
+                <input type="text" id="disabledTextInput1" class="form-control" placeholder="0">
               </div>
               <div class="form-group">
                 <label for="disabledTextInput">Two's</label>
@@ -133,10 +133,10 @@
           <!-- Roll Dice and Start New Game Buttons -->
 
                     <div class="col-sm-6">
-   <button type="button" onclick="changeSourceD1(),changeSourceD2(),changeSourceD3(),changeSourceD4(),changeSourceD5()" class="btn btn-danger" id ="roll-dice-btn">Roll Dice </button>
+   <button type="button" onclick="changeSourceD1(),changeSourceD2(),changeSourceD3(),changeSourceD4(),changeSourceD5(), increment(), checkMaxRolls(), finalArray()" class="btn btn-danger" id ="roll-dice-btn">Roll Dice </button>
         </div>
-        <div class="invisible">
-          <button type="button" onclick = "" class="btn btn-danger" id ="mark-scoreboard-btn"> Rolls Remaining </button>
+        <div class="col-sm-6"">
+          <button type="button" onclick = "" class="btn btn-danger" id ="mark-scoreboard-btn"> Mark ScoreCoard </button>
         </div>
 
     </div>
