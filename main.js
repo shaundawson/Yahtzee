@@ -1,14 +1,21 @@
 //Array of random die images 1-6
 const randomImages= new Array ('images/dice/1.png', 'images/dice/2.png','images/dice/3.png','images/dice/4.png', 'images/dice/5.png','images/dice/6.png');
-
-//Arays with die values for roll1 roll2, roll3
-const roll1Array = new Array();
 let counter = 0
 
-// Roll Checker
+//Array with held and current values
+const roll1Array = new Array();
+
+//Returns final array
+function holdArray(){
+  if (counter >= 3) {
+    console.log(roll1Array);
+  }
+}
+
+// Round Checker
 function checkCounter (){
-if (counter >= 3){
- counter = 0;
+if (counter > 3){
+ counter=1;
 }}
 
 // Add Event listners to Roll Dice Button to randomize images.
@@ -22,28 +29,44 @@ rollDiceClick.addEventListener("click", changeSourceD5);
 }
 
 
-
 //Randomize die image and returns value of die in first-die-slot column
 function changeSourceD1() {
     const d1 = document.querySelector('#first-die-slot');
+    const toggleOn1 = document.querySelector('#first-die-hold-button');
+    let pressed1 = (toggleOn1.getAttribute("aria-pressed") === "false");
+    if (toggleOn1.getAttribute("aria-pressed") === "true") {
+      return roll1Array[0];
+      console.log(roll1Array)
+    }
     const randomDieValue1 = Math.floor((randomImages.length-1)*Math.random());
     const source1 = document.querySelector('#first-die-slot').setAttribute('src',randomImages[randomDieValue1])
     console.log(`The first die is a ${randomDieValue1 +1}`);
     roll1Array[0] = randomDieValue1 +1;
-    counter++
-    alert(`Roll ${counter} of 3`);
+    console.log(`Roll ${counter} of 3`);
+    counter++;
     checkCounter();
+    holdArray();
     return randomDieValue1 +1;
 }
 
 //Randomize die image and returns value of die in second-die-slot column
 function changeSourceD2() {
     const d2 = document.querySelector('#second-die-slot');
+    const toggleOn2 = document.querySelector('#second-die-hold-button');
+    let pressed2 = (toggleOn2.getAttribute("aria-pressed") === "false");
+    if (toggleOn2.getAttribute("aria-pressed") === "true") {
+      return roll1Array[1];
+    }
+
     const randomDieValue2 = Math.floor((randomImages.length-1)*Math.random());
     const source2 = document.querySelector('#second-die-slot').setAttribute('src',randomImages[randomDieValue2])
     console.log(`The second die is a ${randomDieValue2 +1}`);
     roll1Array[1] = randomDieValue2 +1;
+    console.log(`Roll ${counter} of 3`);
     return randomDieValue2 +1;
+    // If Button toggle is on don't change me
+      // get dom refrence for button with number that corresponds to this die
+      // query that dom refrence and do the thing
 }
 
 //Randomize die image and returns value of die in third-die-slot column
@@ -79,19 +102,24 @@ function changeSourceD5() {
 // Check to see if the hold button is pressed in first-die-slot column
 function toggleButtonOne() {
   const toggleOn1 = document.querySelector('#first-die-hold-button');
-  const pressed1 = (toggleOn1.getAttribute("aria-pressed") === "false");
+  let pressed1 = (toggleOn1.getAttribute("aria-pressed") === "true");
+  if (toggleOn1.getAttribute("aria-pressed") === "true") {
+      return;}
   // Change aria-pressed to the opposite state
   toggleOn1.setAttribute("aria-pressed", !pressed1);
   indexToInsertNewElementAt = roll1Array[0],
   elementToInsert = roll1Array[0];
   console.log(pressed1);
   alert(`You held a ${elementToInsert}`);
+  console.log(`You held a ${elementToInsert}`);
 }
 
 // Check to see if the hold button is pressed in second-die-slot column
 function toggleButtonTwo() {
   const toggleOn2 = document.querySelector('#second-die-hold-button');
-  const pressed2 = (toggleOn2.getAttribute("aria-pressed") === "false");
+  let pressed2 = (toggleOn2.getAttribute("aria-pressed") === "false");
+ if (toggleOn2.getAttribute("aria-pressed") === "true") {
+      return;}
   // Change aria-pressed to the opposite state
   toggleOn2.setAttribute("aria-pressed", !pressed2);
   indexToInsertNewElementAt = roll1Array[1],
